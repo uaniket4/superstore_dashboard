@@ -77,18 +77,34 @@ def add_key_insights_page(pdf: PdfPages) -> None:
     fig = plt.figure(figsize=(8.27, 11.69))
     fig.patch.set_facecolor("white")
 
-    fig.text(0.08, 0.92, "Key Insights", fontsize=20, fontweight="bold", ha="left")
-    bullet_text = (
-        "• Placeholder insight 1: ________________________________\n\n"
-        "• Placeholder insight 2: ________________________________\n\n"
-        "• Placeholder insight 3: ________________________________\n\n"
-        "• Placeholder insight 4: ________________________________\n\n"
-        "• Placeholder insight 5: ________________________________"
-    )
-    fig.text(0.1, 0.8, bullet_text, fontsize=13, va="top", ha="left", linespacing=1.6)
+    fig.text(0.08, 0.95, "Key Insights", fontsize=20, fontweight="bold", ha="left")
+
+    insights = [
+        "1.  West region leads in both sales ($725K) and profit ($108K).\n"
+        "     Central region has the worst profit margin at just 7.8% despite\n"
+        "     being second highest in sales — indicating high discounting.",
+
+        "2.  Consumer segment contributes 50%+ of total revenue ($1.16M),\n"
+        "     making it the most valuable customer group to retain and grow.",
+
+        "3.  Furniture - Tables is a loss-making sub-category despite $206K\n"
+        "     in sales. Aggressive discounting is likely eroding all margins.",
+
+        "4.  Technology has the strongest profit margins — Copiers generate\n"
+        "     $56K profit on $150K sales (~37% margin), the best in the dataset.",
+
+        "5.  Sales show a clear upward trend from 2014 to 2017 with consistent\n"
+        "     November–December spikes every year, confirming strong seasonality.",
+    ]
+
+    y_position = 0.88
+    for insight in insights:
+        fig.text(0.08, y_position, insight, fontsize=11, va="top", ha="left",
+                 linespacing=1.5, color="#333333", wrap=True)
+        y_position -= 0.16
+
     pdf.savefig(fig, bbox_inches="tight")
     plt.close(fig)
-
 
 # Section: Assemble the complete PDF report from the summary page and saved chart images.
 def main() -> None:
