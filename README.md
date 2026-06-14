@@ -32,6 +32,34 @@ Running the workflow produces the following outputs in the `output/` folder:
 - `05_customer_segment_analysis.png`
 - `Superstore_Sales_Report.pdf`
 
+## Output Showcase
+
+The report generates the following visuals and document artifacts.
+
+### Monthly Sales & Profit Trend
+
+![Monthly Sales & Profit Trend](output/01_monthly_sales_profit_trend.png)
+
+### Region Performance
+
+![Region Performance](output/02_region_performance.png)
+
+### Category & Sub-Category Breakdown
+
+![Category & Sub-Category Breakdown](output/03_category_subcategory_breakdown.png)
+
+### Top 10 Products by Sales
+
+![Top 10 Products by Sales](output/04_top_10_products_by_sales.png)
+
+### Customer Segment Analysis
+
+![Customer Segment Analysis](output/05_customer_segment_analysis.png)
+
+### PDF Report
+
+[View the generated report](output/Superstore_Sales_Report.pdf)
+
 ## Requirements
 
 The project uses the following Python libraries:
