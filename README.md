@@ -56,6 +56,9 @@ The report generates the following visuals and document artifacts.
 
 ![Customer Segment Analysis](output/05_customer_segment_analysis.png)
 
+### Excel Sheet Report Summary 
+![Excel Sheet Report Summary](output/screenshot.png)
+
 ### PDF Report
 
 [View the generated report](output/Superstore_Sales_Report.pdf)
